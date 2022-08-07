@@ -5,11 +5,10 @@ import './index.css';
 import App from './App';
 
 const GITHUB_BASE_URL = 'https://api.github.com/graphql';
-//const GITHUB_BASE_URL = 'https://docs.github.com/en/free-pro-team@latest/graphql/reference/objects#topic';
+// const GITHUB_BASE_URL = 'https://api.spacex.land/graphql/';
 
 const client = new ApolloClient({
-  uri: "https://api.spacex.land/graphql/",
-  // uri: "https://docs.github.com/en/free-pro-team@latest/graphql/reference/objects#topic",
+  uri: 'https://api.spacex.land/graphql/',
   cache: new InMemoryCache()
 });
 
@@ -26,24 +25,12 @@ const headers = {
 const body = {
   "query": `
     query {
-      __type(name:"Repository") {
-        fields {
-          name
-          description
-          type {
-            kind
-            name
-            description
-          }
-          args {
-            name
-            description
-            type {
-              kind
-              name
-              description
-            }
-            defaultValue
+      login(login: ${github_data.username}) {
+        issues(first: 10) {
+          nodes {
+            title,
+            body,
+            closedAt
           }
         }
       }
@@ -56,7 +43,7 @@ fetch(GITHUB_BASE_URL, {
   mode: 'no-cors',
   body: JSON.stringify(body),
 })
-.then(response => console.log('then => ', JSON.stringify(response)))
+.then(response => console.log('then => ', response))
 .catch(err => console.log('err => ', err));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

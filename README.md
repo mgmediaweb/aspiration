@@ -8,7 +8,10 @@ The application should display how many "[stargazers](https://docs.github.com/en
 
 To interact with the Github GraphQL API you'll need to have 
 * a [Github API key](https://docs.github.com/en/free-pro-team@latest/graphql/guides/forming-calls-with-graphql#authenticating-with-graphql) 
-git* You'll want to make use of the key in the .env file within your application You may use whatever React framework or library you find useful. URL routing is optional.
+git.
+* You'll want to make use of the key in the .env file within your application.
+
+You may use whatever React framework or library you find useful. URL routing is optional.
 
 ## Evaluation:
 
