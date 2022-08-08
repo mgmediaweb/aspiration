@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import { useQuery, gql } from "@apollo/client";
+import React, { useState } from 'react';
+import { useQuery, gql } from '@apollo/client';
 import { v4 as uuidv4 } from 'uuid';
 import star from './assets/images/star-icon.svg';
 import './App.css';
 
-const createQuery = (elements, search) => {
-  return gql`
+const createQuery = (elements, search) => gql`
   query {
     search(
       first: ${elements}, 
@@ -16,13 +15,12 @@ const createQuery = (elements, search) => {
         ... on Repository { nameWithOwner, stargazerCount, url }
       }
     }
-  }`;  
-};
+  }`;
 
 function App() {
-  const [ elements, setElements ] = useState(10);
-  const [ search, setSearch ] = useState('React');
-  const { data, loading, error } = useQuery(createQuery(elements,search));
+  const [elements, setElements] = useState(10);
+  const [search, setSearch] = useState('React');
+  const { data, loading, error } = useQuery(createQuery(elements, search));
 
   if (loading) return (<div className="container center-msj">Loading...</div>);
   if (error) return (<div className="container center-msj"><pre>{error.message}</pre></div>);
@@ -60,7 +58,7 @@ function App() {
         {data.search.nodes.map((item) => (
           <li key={uuidv4()}>
             <a href={item.url} target="new">
-              {item.nameWithOwner.slice(0,70)}
+              {item.nameWithOwner.slice(0, 70)}
             </a>
             <span title="Stargazer">
               {item.stargazerCount}

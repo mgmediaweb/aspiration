@@ -27,15 +27,30 @@ Best of luck
 
 ### Dev Notes
 
-* Leave any technical notes on any libraries or tools you chose to use, the more detail the better.
+
+
+### View Live Demo
+https://mg-aspiration.herokuapp.com/
 
 ### How to run app & test
 
-* Leave instruction on how to run and test your app here
+To view this document on your local computer:
+* Clone this repository.
+* Install dependencies (npm install).
+* Create a .env.local file with you personal GitHub Access Token (REACT_APP_TOKEN = YOUR_TOKEN).
+* Run React environment (npm start).
+
+To testing:
+* run **npm test** and check test result.
 
 ### Future Improvements
 Feel free to elaborate on how you would improve any of the following topics 
 
 * Code Structuring: 
+    If this web app continues to grow, it is recommended to use a suitable file structure for better organization and easy maintenance.
+    
 * Refactoring: 
+    This practical example is refactored in its maximum expression, however, if this webapp will grow with new functions, it is possible that it will require a refactoring
+
 * Additional Features:
+    An infinite number of options can be implemented, such as ordering by name or number of stars. Drop-down menus to show the description of each Repository. Indicate statistics of amount of Forks, among many other examples.
