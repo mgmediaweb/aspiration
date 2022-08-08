@@ -27,7 +27,7 @@ Best of luck
 
 ### Dev Notes
 
-
+In this exercise, the **@Apollo** library was used to connect to the **GraphQL** environment, in addition to the **UUIDv4** library to generate unique ids for the iteration of displaying the elements on the screen.
 
 ### View Live Demo
 https://mg-aspiration.herokuapp.com/
@@ -48,7 +48,7 @@ Feel free to elaborate on how you would improve any of the following topics
 
 * Code Structuring: 
     If this web app continues to grow, it is recommended to use a suitable file structure for better organization and easy maintenance.
-    
+
 * Refactoring: 
     This practical example is refactored in its maximum expression, however, if this webapp will grow with new functions, it is possible that it will require a refactoring
 
