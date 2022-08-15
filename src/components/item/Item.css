@@ -1,10 +1,27 @@
-ul li {
+.itemBox {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  user-select: none;
 }
 
-ul li:hover {
-  background-color: rgb(245, 245, 245);
+.itemBox:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.itemTopics {
+  border-top: solid 1px bisque;
+  background-color: rgba(255, 228, 196, 0.33);
+}
+
+.relatedTopic {
+  display: none;
+}
+
+.starIcon {
+  height: 14px;
+  margin-left: 5px;
+  width: auto;
 }

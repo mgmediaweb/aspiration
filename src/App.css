@@ -19,28 +19,8 @@ body {
   background-color: rgb(238, 238, 238);
 }
 
-button {
-  background-color: navy;
-  border: none;
-  color: white;
-  height: 2rem;
-  padding: 0 10px;
-}
-
-button:hover {
-  background-color: black;
-  cursor: pointer;
-}
-
 html {
   font-size: 16px;
-}
-
-input {
-  height: 2rem;
-  margin-right: 10px;
-  padding: 0 10px;
-  width: 150px;
 }
 
 ul {
@@ -63,12 +43,6 @@ select {
 .center-msj {
   align-items: center;
   display: flex;
+  height: 100vh;
   justify-content: center;
-  min-height: 400px;
-}
-
-.starIcon {
-  height: 14px;
-  margin-left: 5px;
-  width: auto;
 }

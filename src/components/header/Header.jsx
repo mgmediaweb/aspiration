@@ -7,18 +7,13 @@ const Header = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    newSearch(e.target.elements.value, e.target.search.value);
+    newSearch(10, e.target.search.value);
   };
 
   return (
     <header>
-      <h1>Github GraphQL API Seeker</h1>
+      <h1>Github Topic Seeker</h1>
       <form onSubmit={handleSubmit}>
-        <select name="elements" title="count of elements">
-          <option value="10">10</option>
-          <option value="25">25</option>
-          <option value="50">50</option>
-        </select>
         <input
           aria-label="search"
           aria-required="true"
